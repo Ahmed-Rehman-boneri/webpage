@@ -33,18 +33,21 @@ navCloseBtn.addEventListener("click", () => {
         clickable: true,
     },
     autoplay: {
-        delay: 1000, // Time in milliseconds between slide changes
+        delay: 2000, // Time in milliseconds between slide changes
         disableOnInteraction: false, // Keeps autoplay running even after user interaction
     },
     slidesPerView: 1,
-    spaceBetween: 20, // Optional: Space between slides
+    spaceBetween: 10, // Optional: Space between slides
     breakpoints: {
         768: {
             slidesPerView: 1,
         },
         1024: {
-            slidesPerView: 7,
+            slidesPerView: 3,
         },
+        1280: {
+          slidesPerView: 5,
+      },
     },
 });
 

@@ -9,126 +9,92 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        .testimonial-container {
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            background: green;
+            height: 500px;
+            padding: 30px;
+            border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
         }
 
-        .client-container {
-            width: 80%;
-            /* max-width: 800px; */
-            text-align: center;
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .client-header {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-
-        .client-subheader {
-            font-size: 14px;
-            color: #888;
-            margin-bottom: 20px;
-        }
-
-        .swiper-slide {
+        .testimonial-swiper-slide {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            position: relative;
+            height: 300px;
         }
 
-        .client-image {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            margin-bottom: 40px;
+        .testimonial-image1 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform: scale(1.2);
+            z-index: 1;
         }
 
-        .swiper-pagination-bullet {
-            background: #000;
-            opacity: 0.6;
+        .testimonial-image2 {
+            width: 200px;
+            height: 200px;
+            transform: scale(0.9);
         }
 
-        .swiper-pagination-bullet-active {
-            opacity: 1;
+        .testimonial-image3 {
+            width: 200px;
+            height: 200px;
+            transform: scale(0.9);
         }
     </style>
 </head>
 
 <body>
 
-    <div class="client-container">
-        <h2 class="client-header">My Clients</h2>
-        <p class="client-subheader">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
-            velit</p>
-        <!-- Swiper -->
-        <div class="swiper client-swiper">
-            <div class="swiper-wrapper client-swiper-wrapper">
-                <!-- Client Slide -->
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
+    <div class="testimonial-container">
+        <div class="swiper testimonial-swiper">
+            <div class="swiper-wrapper testimonial-swiper-wrapper">
+
+                <div class="swiper-slide testimonial-swiper-slide">
+                    <img src="./images/BANNER1.webp" alt="Client" class="testimonial-image1">
+                    <img src="./images/BANNER2.webp" alt="Client" class="testimonial-image2">
+                    <img src="./images/BANNER3.webp" alt="Client" class="testimonial-image3">
                 </div>
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
+                <div class="swiper-slide testimonial-swiper-slide">
+                    <img src="./images/BANNER3.webp" alt="Client" class="testimonial-image1">
+                    <img src="./images/BANNER1.webp" alt="Client" class="testimonial-image2">
+                    <img src="./images/BANNER2.webp" alt="Client" class="testimonial-image3">
                 </div>
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
+                <div class="swiper-slide testimonial-swiper-slide">
+                    <img src="./images/BANNER2.webp" alt="Client" class="testimonial-image1">
+                    <img src="./images/BANNER3.webp" alt="Client" class="testimonial-image2">
+                    <img src="./images/BANNER1.webp" alt="Client" class="testimonial-image3">
                 </div>
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
-                </div>
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
-                </div>
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
-                </div>
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
-                </div>
-                <div class="swiper-slide client-swiper-slide">
-                    <img src="https://via.placeholder.com/80" alt="Client" class="client-image">
-                </div>
-                <!-- Add more slides as needed -->
+
             </div>
-            <!-- Pagination -->
-            <div class="swiper-pagination client-swiper-pagination" style="margin-top: 20px;"></div>
         </div>
     </div>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Swiper
-        const swiper = new Swiper('.swiper', {
+        const testimonialSwiper = new Swiper('.testimonial-swiper', {
             loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
             autoplay: {
-                delay: 1000, // Time in milliseconds between slide changes
-                disableOnInteraction: false, // Keeps autoplay running even after user interaction
+                delay: 3000,
+                disableOnInteraction: false,
             },
             slidesPerView: 1,
-            spaceBetween: 20, // Optional: Space between slides
+            spaceBetween: 60,
             breakpoints: {
                 768: {
                     slidesPerView: 1,
                 },
                 1024: {
-                    slidesPerView: 7,
+                    slidesPerView: 1,
                 },
             },
         });

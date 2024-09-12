@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./test3.css">
+
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+<style>
+    .swiper-container {
+  width: 80%;
+  height: 400px;
+  margin: auto;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: green; /* Optional background color */
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+</style>
+    
+</head>
+
+<body>
+    <div class="flex">
+    <div class="toy-container">
+        <div class="swiper toy-swiper">
+            <div class="swiper-wrapper toy-wrapper">
+                <div class="swiper-slide toy-slide">
+                    <p>SEASONAL SALE - UP TO 60% OFF</p>
+                    <h1>Stuffed Animals</h1>
+                    <p>Price from: Rs.999</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="swiper-slide toy-slide">
+                    <p>SEASONAL SALE - UP TO 60% OFF</p>
+                    <h1>Building Blocks</h1>
+                    <p>Price from: Rs.799</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="swiper-slide toy-slide">
+                    <p>SEASONAL SALE - UP TO 60% OFF</p>
+                    <h1>Remote Control Cars</h1>
+                    <p>Price from: Rs.1499</p>
+                    <button>Shop Now</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial-container">
+        <div class="swiper toy-swiper">
+            <div class="swiper-wrapper testimonial-swiper-wrapper">
+
+                <div class="swiper-slide testimonial-swiper-slide">
+                    <img src="./images/BANNER1.webp" alt="Client" class="testimonial-image1">
+                    <img src="./images/BANNER2.webp" alt="Client" class="testimonial-image2">
+                    <img src="./images/BANNER3.webp" alt="Client" class="testimonial-image3">
+                </div>
+                <div class="swiper-slide testimonial-swiper-slide">
+                    <img src="./images/BANNER3.webp" alt="Client" class="testimonial-image1">
+                    <img src="./images/BANNER1.webp" alt="Client" class="testimonial-image2">
+                    <img src="./images/BANNER2.webp" alt="Client" class="testimonial-image3">
+                </div>
+                <div class="swiper-slide testimonial-swiper-slide">
+                    <img src="./images/BANNER2.webp" alt="Client" class="testimonial-image1">
+                    <img src="./images/BANNER3.webp" alt="Client" class="testimonial-image2">
+                    <img src="./images/BANNER1.webp" alt="Client" class="testimonial-image3">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <img src="./images/BANNER1.webp" alt="Teddy 1" />
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="./images/BANNER2.webp" alt="Teddy 2" />
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <img src="./images/BANNER3.webp" alt="Teddy 3" />
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      
+</div>
+
+    
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./test3.js"></script>
+    <script>
+
+    </script>
+
+<script>
+    var swiper = new Swiper(".swiper-container", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+  
+
+</body>
+
+</html>
