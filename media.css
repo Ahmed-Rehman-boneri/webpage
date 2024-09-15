@@ -1,14 +1,19 @@
 /* responsive */
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1280px) {
     .nav {
       padding: 15px 100px;
     }
+    .banner{
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+    }
 
   }
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 1024px) {
     .nav {
       padding: 15px 50px;
     }
+    
   }
   @media screen and (max-width: 768px) {
     .nav .navOpenBtn,
