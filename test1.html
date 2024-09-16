@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .age-category-container {
+            width: 100%;
+            margin: 0px 60px;
+            box-sizing: border-box;
+            /* max-width: 1000px; */
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .age-category-header {
+            font-size: 24px;
+            margin-bottom: 50px;
+            
+        }
+
+        .age-category-subheader {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* align-items: ; */
+            justify-content: space-around;
+            width: 100px;
+            /* height: 150px; */
+            /* background-color: yellow; */
+            border-radius:10px ;
+            margin-bottom: 50px;
+        }
+        .age-category-swiper-wrapper{
+            width: 10px;
+        }
+
+        .swiper-slide h3{
+            font-size: 32px;
+            font-weight: 200;
+        }
+        .swiper-slide p{
+            font-size: 22px;
+            /* margin-bottom: 25px; */
+            font-weight: 200;
+        }
+
+        /* .age-category-image {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 40px;
+        } */
+
+        .swiper-pagination-bullet {
+            background: #000;
+            opacity: 0.6;
+            margin-top: 50px ;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="age-category-container">
+        <h2 class="age-category-header">Shop By age</h2>
+        <!-- <p class="age-category-subheader">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur -->
+            <!-- velit</p> -->
+        <!-- Swiper -->
+        <div class="swiper age-category-swiper">
+            <div class="swiper-wrapper age-category-swiper-wrapper">
+                <!-- Age Category Slide -->
+                <div class="swiper-slide age-category-swiper-slide" style="background-color: rgb(220, 157, 236);">
+                    <h3>0 - 12</h3>
+                    <p>month</p>
+                    <!-- <img src="https://via.placeholder.com/80" alt="Age Category" class="age-category-image"> -->
+                </div>
+                <div class="swiper-slide age-category-swiper-slide" style="background-color: rgb(150, 182, 150);">
+                    <!-- <img src="https://via.placeholder.com/80" alt="Age Category" class="age-category-image"> -->
+                    <h3>1 - 2</h3>
+                    <p>Year</p>
+                </div>
+                <div class="swiper-slide age-category-swiper-slide" style="background-color: rgb(231, 236, 179);">
+                    <!-- <img src="https://via.placeholder.com/80" alt="Age Category" class="age-category-image"> -->
+                    <h3>3 +</h3>
+                    <p>month</p>
+                </div>
+                <div class="swiper-slide age-category-swiper-slide" style="background-color: rgb(165, 233, 218);">
+                    <!-- <img src="https://via.placeholder.com/80" alt="Age Category" class="age-category-image"> -->
+                    <h3>5 +</h3>
+                    <p>month</p>
+                </div>
+                <div class="swiper-slide age-category-swiper-slide" style="background-color: rgb(169, 212, 247);">
+                    <!-- <img src="https://via.placeholder.com/80" alt="Age Category" class="age-category-image"> -->
+                    <h3>10 +</h3>
+                    <p>month</p>
+                </div>
+               
+              
+                <!-- Add more slides as needed -->
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination age-category-swiper-pagination" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        const ageCategorySwiper = new Swiper('.age-category-swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 1000, // Time in milliseconds between slide changes
+                disableOnInteraction: false, // Keeps autoplay running even after user interaction
+            },
+            slidesPerView: 1,
+            spaceBetween: 30, // Optional: Space between slides
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 60,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1280: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>

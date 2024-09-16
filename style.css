@@ -105,8 +105,9 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color: #dfcdbc;
-  height: 800px;
+  background: url("./images/Rectangle2.png") no-repeat center center;
+  background-size: cover;
+  height: 90vh;
 
 }
 
